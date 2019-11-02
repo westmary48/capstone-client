@@ -3,7 +3,7 @@ import React, { useEffect, useState }  from "react"
 import { withRouter, Redirect } from "react-router-dom"
 import Register from "./auth/Register"
 import Login from "./auth/Login"
-// import HomePage from "./home/HomePage"
+import HomePage from "./home/HomePage"
 import ItemCategories from "./itemcategories/ItemCategories"
 import MyItems from "../components/items/MyItems"
 import useSimpleAuth from "../hooks/ui/useSimpleAuth"
@@ -48,12 +48,12 @@ useEffect(() => {
 
     return (
         <React.Fragment>
-{/*
-            <Route
+
+             <Route
                 exact path="/" render={props => {
-                    return <HomePage {...props} />
-                }}
-            /> */}
+                   return <HomePage {...props} />
+               }}
+           />
             <Route
                 path="/register" render={props => {
                     return <Register {...props} />
