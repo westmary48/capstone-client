@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
-import useSimpleAuth from "../../hooks/ui/useSimpleAuth"
+import useSimpleAuth from "../../hooks/ui/UseSimpleAuth"
 
 
 const NavBar = props => {
