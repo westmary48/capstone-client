@@ -22,15 +22,11 @@ const NavBar = props => {
                     isAuthenticated() ?
                     <>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myProducts">My Clothing Items</Link>
+                            <Link className="nav-link" to="/myItems">My Clothing Items</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/profile">My Profile</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/reports">Reports</Link>
-                        </li>
-
                         <li className="nav-item">
                             <Link className="nav-link" to="/cart">DonationBox</Link>
                         </li>
