@@ -49,7 +49,7 @@ const HomePage = props => {
     }
     const dynamicHeader = (city) => {
       if (name === undefined) {
-        return <h3>Items You are considering donating:</h3>
+        return <h3>See Whats all Being Donated</h3>
       }
       else if (name === ""){
         return <h3>Please enter a item name</h3>

@@ -8,7 +8,7 @@ const DonationBoxDetail = props => {
 
 
     const getItemDonationBoxes = () => {
-            fetch(`http://localhost:8000/itemdonationboxess?donationbox_id=${props.donationbox.id}`, {
+            fetch(`http://localhost:8000/itemdonationboxes?donationbox_id=${props.donationbox.id}`, {
                 "method": "GET",
                 "headers": {
                   "Accept": "application/json",

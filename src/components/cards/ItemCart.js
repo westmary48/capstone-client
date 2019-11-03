@@ -19,8 +19,6 @@ const ItemCart = (props) => {
     }
 
     useEffect(getItem, [])
-    console.log(item)
-
 
     return (
         <>
