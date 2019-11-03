@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
 import useSimpleAuth from "../../hooks/ui/useSimpleAuth"
-import ItemCart from "../cards/itemCart"
+import ItemCart from "../cards/ItemCart"
 import { CLIENT_RENEG_LIMIT } from "tls"
 
 
