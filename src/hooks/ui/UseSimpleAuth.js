@@ -19,6 +19,7 @@ const useSimpleAuth = () => {
             .then(res => res.json())
             .then(res => {
                 if ("token" in res) {
+                    localStorage.setItem( "id", res.id )
                     localStorage.setItem( "capstone_token", res.token )
                     setIsLoggedIn(true)
                 }
@@ -37,6 +38,7 @@ const useSimpleAuth = () => {
             .then(res => res.json())
             .then(res => {
                 if ("valid" in res && res.valid && "token" in res) {
+                    localStorage.setItem( "id", res.id )
                     localStorage.setItem( "capstone_token", res.token )
                     setIsLoggedIn(true)
                 }
@@ -46,6 +48,7 @@ const useSimpleAuth = () => {
     const logout = () => {
         setIsLoggedIn(false)
         localStorage.removeItem("capstone_token")
+        localStorage.removeItem("id")
     }
 
     return { isAuthenticated, logout, login, register }
