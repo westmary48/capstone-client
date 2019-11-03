@@ -1,46 +1,46 @@
 import React, { useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
 import useSimpleAuth from "../../hooks/ui/useSimpleAuth"
-import PaymentType from "../cards/PaymentType"
+import DropoffDate from "../cards/DropoffDate"
 
-const ProductCategories = props => {
-    const [paymentTypes, setPaymentTypes] = useState([])
+const Dropoffs = props => {
+    const [dropoffTypes, setDropoffTypes] = useState([])
     const { isAuthenticated } = useSimpleAuth()
 
-    const getPaymentTypes = () => {
+    const getDropoffDates = () => {
         if (isAuthenticated()) {
-            fetch(`http://localhost:8000/paymenttypes?donator=${localStorage.getItem("id")}`, {
+            fetch(`http://localhost:8000/dropoffs?donator=${localStorage.getItem("id")}`, {
                 "method": "GET",
                 "headers": {
                     "Authorization": `Token ${localStorage.getItem("capstone_token")}`
                 }
             })
                 .then(response => response.json())
-                .then(setPaymentTypes)
+                .then(setDropoffTypes)
         }
     }
 
-    useEffect(getPaymentTypes, [])
+    useEffect(getDropoffDates, [])
 
 
     return (
         <>
             {
-              paymentTypes.length > 0 ?
+              dropoffTypes.length > 0 ?
               <>
-                <h1>Payment Options</h1>
+                <h1>Dropoff Date Options</h1>
                 <article className="paymentTypeList">
                     {
-                        paymentTypes.map(paymentType=>
-                            <PaymentType key={paymentType.id} paymentType={paymentType} getPaymentTypes={getPaymentTypes} />
+                        dropoffTypes.map(dropoffType=>
+                            <DropoffDate key={dropoffType.id} dropoffType={dropoffType} getDropoffDates={getDropoffDates} />
                         )
                     }
                 </article>
               </>
               :
               <>
-                <Link className="nav-link" to="/payment/create">
-                  <h6>Add some Payment Options!</h6>
+                <Link className="nav-link" to="/dropoff/create">
+                  <h6>Add some Dropoff Options!</h6>
                 </Link>
               </>
             }
@@ -48,4 +48,4 @@ const ProductCategories = props => {
     )
 }
 
-export default ProductCategories
+export default Dropoffs

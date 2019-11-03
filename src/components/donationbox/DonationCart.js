@@ -97,7 +97,7 @@ const DonationboxCart = (props) => {
           <h2>Items in your Donationbox:</h2>
           <div className="orderBtn-Div">
             <button onClick={() => {
-              props.history.push("/cart/addPayment")
+              props.history.push("/cart/addDropoff")
             }}>
             Complete Donationbox
             </button>
@@ -106,7 +106,7 @@ const DonationboxCart = (props) => {
             Delete Donationbox
             </button>
           </div>
-        <section className="cartProducts">
+        <section className="cartItems">
             {/* ternary statement to load the rest of the code after the page has been mounted */}
             {
                 donationbox ?

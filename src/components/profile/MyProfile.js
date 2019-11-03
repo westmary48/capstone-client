@@ -62,11 +62,11 @@ const Profile = props => {
             }} >
               <h6>Edit Profile</h6>
             </Link>
-            {/* <Link className="nav-link" to={`/payment/options`}>
-              <h4>Payment Options</h4>
-            </Link> */}
-            <Link className="nav-link" to={`/payment/create`}>
-              <h4>Add New Payment Type</h4>
+            <Link className="nav-link" to={`/dropoff/options`}>
+              <h4>Dropoff Options</h4>
+            </Link>
+            <Link className="nav-link" to={`/dropoff/create`}>
+              <h4>Add Dropoff Date</h4>
             </Link>
 
             <Link className="nav-link" to={`/donationboxhistory`}>
