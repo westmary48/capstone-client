@@ -17,6 +17,7 @@ import ItemCategory from './itemcategories/ItemCategory'
 import DonationCart from './donationbox/DonationCart'
 import CompleteDonationbox from './donationbox/CompleteDonationbox'
 import PaymentTypes from "./paymentmethod/PaymentTypes"
+import PaymentTypeForm from './paymentmethod/PaymentTypeForm'
 
 
 const ApplicationViews = () => {
@@ -230,6 +231,14 @@ useEffect(() => {
                 }}
             />
 
+              <Route
+                exact path="/payment/create" render={props => {
+                    if(isAuthenticated()) return (
+                        <PaymentTypeForm {...props} />
+                    )
+                    else return <Redirect to="/login"/>
+                }}
+            />
 
         </React.Fragment>
     )
