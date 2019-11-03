@@ -23,6 +23,7 @@ const Profile = props => {
           const donator = donators.find(donator => {
             return donator.id === parseInt(localStorage.getItem("id"))
           });
+          console.log(donator.id)
           setDonator(donator);
         });
     }

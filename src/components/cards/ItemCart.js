@@ -32,9 +32,6 @@ const ItemCart = (props) => {
                     </Link>
                 </section>
               <p className="card-text">Quantity: <b>{props.quantity}</b></p>
-              <p className="card-text">Size: <b>{props.size}</b></p>
-              <p className="card-text">Description: <b>{props.description}</b></p>
-              <p className="card-text">Category: <b>{props.category.name}</b></p>
                 </div>
             </div>
         </>

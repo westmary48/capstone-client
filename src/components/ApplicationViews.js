@@ -13,6 +13,10 @@ import MyProfile from './profile/MyProfile'
 import ItemDetail from './items/ItemDetail'
 import DonationBoxHistory from './profile/DonationBoxHistory'
 import DonationboxDetail from './profile/DonationboxDetail'
+import ItemCategory from './itemcategories/ItemCategory'
+import DonationCart from './donationbox/DonationCart'
+import CompleteDonationbox from './donationbox/CompleteDonationbox'
+import PaymentTypes from "./paymentmethod/PaymentTypes"
 
 
 const ApplicationViews = () => {
@@ -175,6 +179,57 @@ useEffect(() => {
               }
               }}
             />
+
+            <Route exact path="/itemcategories/:categoryId(\d+)" render={(props) => {
+              let category = categories.find(category =>
+              category.id === +props.match.params.categoryId
+              )
+              if (!category) {
+                category = {id:404, name:"Category Not Found." }
+              }
+              return <ItemCategory {...props} category={ category } />
+              }}
+            />
+
+            <Route
+                exact path="/cart" render={props => {
+                  if (isAuthenticated()) {
+                      return (
+                        <DonationCart {...props} />
+                      )
+                    } else {
+                      return <Redirect to="/login" />
+                    }
+                }}
+            />
+            <Route exact path="/donationboxhistory/:donationboxId(\d+)" render={(props) => {
+              let donationbox = completeDonationboxes.find(donationbox => donationbox.id === +props.match.params.donationboxId)
+              if (donationbox) {
+                return <DonationboxDetail getItems={getItems}  {...props} donationbox={donationbox} />
+              }
+              }}
+            />
+            <Route
+                exact path="/cart/addPayment" render={props => {
+                    if(isAuthenticated()) return (
+                       <CompleteDonationbox {...props} getCompleteDonationboxes={ getCompleteDonationboxes} getItems={getItems} />
+                    )
+                    else return <Redirect to="/login" />
+                }}
+            />
+
+            <Route
+                exact path="/payment/options" render={props => {
+                  if (isAuthenticated()) {
+                      return (
+                        <PaymentTypes {...props} />
+                      )
+                    } else {
+                      return <Redirect to="/login" />
+                    }
+                }}
+            />
+
 
         </React.Fragment>
     )
