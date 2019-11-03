@@ -64,12 +64,12 @@ const HomePage = props => {
 
       return(
         <>
-          <h1> WELCOME TO Size Your Drive</h1>
+          <h1> Welcome to Size Your Drive</h1>
 
           {isAuthenticated() ?
 
-          <a href='/'>
-              <h4>Add a Product</h4>
+          <a href='/items/new'>
+              <h4>Add a Item</h4>
               </a> : ""}
 
           <form>

@@ -15,21 +15,22 @@ const MyItems = props => {
                   "headers": {
                     "Accept": "application/json",
                     "Content-Type": "application/json",
-                    "Authorization": `Token ${localStorage.getItem("bangazon_token")}`
+                    "Authorization": `Token ${localStorage.getItem("capstone_token")}`
                   }
               })
               .then(response => response.json())
               .then(setMyItems)
       }
     useEffect(getMyItems, [])
+
     return(
         <>
           <h1>My Items{myItems ? `(${myItems.length})` : ""}</h1>
 
           {isAuthenticated() ?
 
-          <a href='/'>
-              <h4>Sell a Item</h4>
+          <a href='/items/new'>
+              <h4>Add Clothing Item</h4>
               </a> : ""}
           <div className="myProducts-Div">
           {myItems.length > 0 ?
@@ -39,7 +40,7 @@ const MyItems = props => {
 
           //  in the link below create a form link for a new item
 
-          : <p>You have no items. Create a item<a href='/'> here</a>.</p>}
+          : <p>You have no items. Create a item<a href='/items/new'> here</a>.</p>}
           </div>
         </>
     )
