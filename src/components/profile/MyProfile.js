@@ -29,7 +29,6 @@ const Profile = props => {
   };
 
   useEffect(() => {
-    console.log(donator)
     getDonators()
 
   }, []);
