@@ -5,22 +5,22 @@ import useSimpleAuth from "../../hooks/ui/useSimpleAuth"
 
 
 const CompleteDonationbox = props => {
-    const [paymentTypes, setPaymentTypes] = useState([])
+    const [dropoffTypes, setDropoffTypes] = useState([])
     const [donationbox, setDonationbox] = useState([])
     const { isAuthenticated } = useSimpleAuth()
-    const payment = useRef()
+    const dropoff = useRef()
 
 
-    const getPaymentTypes = () => {
+    const getDropoffDates = () => {
         if (isAuthenticated()) {
-            fetch(`http://localhost:8000/paymenttypes?donator=${localStorage.getItem("id")}`, {
+            fetch(`http://localhost:8000/dropoffs?donator=${localStorage.getItem("id")}`, {
                 "method": "GET",
                 "headers": {
                     "Authorization": `Token ${localStorage.getItem("capstone_token")}`
                 }
             })
                 .then(response => response.json())
-                .then(setPaymentTypes)
+                .then(setDropoffTypes)
         }
     }
 
@@ -37,7 +37,7 @@ const CompleteDonationbox = props => {
       }
   }
 
-  const addPaymentType = () => {
+  const addDropoffType = () => {
     if (isAuthenticated()) {
         fetch(`http://localhost:8000/donationboxes/${donationbox[0].id}`, {
             "method": "PUT",
@@ -47,7 +47,7 @@ const CompleteDonationbox = props => {
               "Authorization": `Token ${localStorage.getItem("capstone_token")}`
             },
             "body": JSON.stringify({
-              "payment_type": +payment.current.value
+              "dropoff_time": +dropoff.current.value
           })
         })
         .then(() => {
@@ -62,7 +62,7 @@ const CompleteDonationbox = props => {
 
 
     useEffect(() => {
-      getPaymentTypes()
+      getDropoffDates()
       getDonationbox()
     }, [])
 
@@ -70,27 +70,27 @@ const CompleteDonationbox = props => {
     return (
         <>
             {
-              paymentTypes.length > 0 ?
+              dropoffTypes.length > 0 ?
               <>
                 <form onSubmit={(e) => {
                   e.preventDefault()
-                  addPaymentType()
+                  addDropoffType()
                 }}>
-                <h4>Please add a payment type.</h4>
-                <select className="paymentTypeSelect" ref={payment}>
+                <h4>Please add a Drop Off Date.</h4>
+                <select className="paymentTypeSelect" ref={dropoff}>
                     {
-                        paymentTypes.map(paymentType=>
-                            <option key={paymentType.id} value={`${paymentType.id}`}>{`${paymentType.merchant_name}: ${paymentType.expiration_date.slice(0,7).split("-").reverse().join("/")}`}</option>
+                        dropoffTypes.map(dropoffType=>
+                            <option key={dropoffType.id} value={`${dropoffType.id}`}>{`${dropoffType.dropoff_date.slice(0,7).split("-").reverse().join("/")}`}</option>
                         )
                     }
                 </select>
-                <button type="submit">Add Payment Type</button>
+                <button type="submit">Add Dropoff Date</button>
                 </form>
               </>
               :
               <>
-                <Link className="nav-link" to="/payment/create">
-                  <h6>Add some Payment Options!</h6>
+                <Link className="nav-link" to="/dropoff/create">
+                  <h6>Add some Dropoff Options!</h6>
                 </Link>
               </>
             }

@@ -16,8 +16,8 @@ import DonationboxDetail from './profile/DonationboxDetail'
 import ItemCategory from './itemcategories/ItemCategory'
 import DonationCart from './donationbox/DonationCart'
 import CompleteDonationbox from './donationbox/CompleteDonationbox'
-import PaymentTypes from "./paymentmethod/PaymentTypes"
-import PaymentTypeForm from './paymentmethod/PaymentTypeForm'
+import DropoffDates from "./dropofftimes/DropoffDates"
+import DropoffDateForm from './dropofftimes/DropoffDateForm'
 
 
 const ApplicationViews = () => {
@@ -211,7 +211,7 @@ useEffect(() => {
               }}
             />
             <Route
-                exact path="/cart/addPayment" render={props => {
+                exact path="/cart/addDropoff" render={props => {
                     if(isAuthenticated()) return (
                        <CompleteDonationbox {...props} getCompleteDonationboxes={ getCompleteDonationboxes} getItems={getItems} />
                     )
@@ -220,10 +220,10 @@ useEffect(() => {
             />
 
             <Route
-                exact path="/payment/options" render={props => {
+                exact path="/dropoff/options" render={props => {
                   if (isAuthenticated()) {
                       return (
-                        <PaymentTypes {...props} />
+                        <DropoffDates {...props} />
                       )
                     } else {
                       return <Redirect to="/login" />
@@ -232,9 +232,9 @@ useEffect(() => {
             />
 
               <Route
-                exact path="/payment/create" render={props => {
+                exact path="/dropoff/create" render={props => {
                     if(isAuthenticated()) return (
-                        <PaymentTypeForm {...props} />
+                        <DropoffDateForm {...props} />
                     )
                     else return <Redirect to="/login"/>
                 }}
