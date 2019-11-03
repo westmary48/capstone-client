@@ -24,9 +24,9 @@ const Item = props => {
           <div className={`card product-${props.item.id}`} style={{width: "18rem"}}>
             <div className="card-body">
               <section className="product">
-                  {/* <Link className="nav-link" to={`/items/${props.item.id}`}>
+                  <Link className="nav-link" to={`/items/${props.item.id}`}>
                       <h5>{props.item.name}</h5>
-                  </Link> */}
+                  </Link>
               </section>
               {
                 props.showCategory ?
@@ -38,8 +38,7 @@ const Item = props => {
                   :
                   ""
               }
-              {/* <p className="card-text">${props.product.price.toFixed(2)}</p>
-              <p className="card-text">Quantity: <b>{props.product.quantity}</b> <font size="1">available</font></p> */}
+              <p className="card-text">Quantity: <b>{props.item.quantity}</b> <font size="1">available</font></p>
               {
                 +props.item.donator.id === +localStorage.getItem("id") ?
                 <>

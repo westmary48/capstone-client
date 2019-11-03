@@ -38,8 +38,6 @@ const MyItems = props => {
               return( <Item key={item.id} item={item} showCategory={true}  getMyItems={getMyItems} /> )
           })
 
-          //  in the link below create a form link for a new item
-
           : <p>You have no items. Create a item<a href='/items/new'> here</a>.</p>}
           </div>
         </>
