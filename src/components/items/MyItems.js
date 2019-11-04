@@ -32,7 +32,7 @@ const MyItems = props => {
           {isAuthenticated() ?
 
           <a href='/items/new'>
-              <h4>Add Clothing Item</h4>
+              <h4 className="add-link">Add Clothing Item</h4>
               </a> : ""}
           <div className="myProducts-Div">
           {myItems.length > 0 ?

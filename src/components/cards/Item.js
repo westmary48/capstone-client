@@ -24,7 +24,7 @@ const Item = props => {
           <div className={`card product-${props.item.id}`} style={{width: "18rem"}}>
             <div className="card-body">
               <section className="product">
-                  <Link className="nav-link" to={`/items/${props.item.id}`}>
+                  <Link className="link-nav-link" to={`/items/${props.item.id}`}>
                       <h5>{props.item.name}</h5>
                   </Link>
               </section>
@@ -34,7 +34,7 @@ const Item = props => {
                 <p>Description:
                       {props.item.description}
                   </p>
-                  <p>Size:
+                  <p>Description:
                       {props.item.size}
                   </p>
                 <p>Category:
@@ -48,7 +48,7 @@ const Item = props => {
               {
                 +props.item.donator.id === +localStorage.getItem("id") ?
                 <>
-                  <button onClick={() => {
+                  <button className="btn btn-info" onClick={() => {
                     if (window.confirm(`Are you sure you want to remove ${props.item.name}?`)) {
                       deleteItem()
                     }

@@ -77,12 +77,14 @@ const ItemForm = props => {
                 </div>
                 <div >
                     <label htmlFor="description">Description:</label>
-                    <textarea
+                    <input
                     ref={description}
                     name="description"
+                    autoFocus
+                    type="text"
                     required>
 
-                    </textarea>
+                    </input>
                 </div>
                 <div>
                     <label htmlFor="quantity">Quantity:</label>
@@ -110,7 +112,7 @@ const ItemForm = props => {
                     </select>
 
                 </div>
-                    <button onClick={addItem}
+                    <button className="btn btn-info" onClick={addItem}
                     >Add Clothing Item</button>
             </form>
         </React.Fragment>

@@ -30,7 +30,7 @@ const NavBar = props => {
                     <Link className="nav-link" to="/itemcategories">ItemCategories</Link>
                         </li>
                         <li className="nav-item">
-                            <button className="nav-link fakeLink"
+                            <button className=" btn btn-info nav-link fakeLink"
                                 onClick={() => {
                                     logout()
                                     props.history.push({

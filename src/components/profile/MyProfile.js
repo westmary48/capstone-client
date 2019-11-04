@@ -40,36 +40,36 @@ const Profile = props => {
         <main className="explorer">
           <div>
             <ul>
-              <p>
+              <p className = "p">
                 <b>First Name:</b> {donator.user.first_name}
               </p>
-              <p>
+              <p className = "p">
                 <b>Last Name:</b> {donator.user.last_name}
               </p>
-              <p>
+              <p className = "p">
                 <b>Email:</b> {donator.user.email}
               </p>
-              <p>
+              <p className = "p">
                 <b>Phone Number:</b> {donator.phone_number}
               </p>
-              <p>
+              <p className = "p">
                 <b>Address:</b> {donator.address}
               </p>
             </ul>
-            <Link className="nav-link" to = {{
+            <Link className="link-nav-link" to = {{
                 pathname: "/profile/update",
                 state: donator
             }} >
-              <h6>Edit Profile</h6>
+              <h4>Edit Profile</h4>
             </Link>
             {/* <Link className="nav-link" to={`/dropoff/options`}>
               <h4>Dropoff Options</h4>
             </Link> */}
-            <Link className="nav-link" to={`/dropoff/create`}>
+            <Link className="link-nav-link" to={`/dropoff/create`}>
               <h4>Add Dropoff Date</h4>
             </Link>
 
-            <Link className="nav-link" to={`/donationboxhistory`}>
+            <Link className="link-nav-link" to={`/donationboxhistory`}>
               <h4>View Donation History</h4>
             </Link>
 
