@@ -17,6 +17,7 @@ const DropoffTime = props => {
               }
           })
               .then(props.getDropoffTypes)
+              console.log(props.dropoffTypes)
 
       }
   }

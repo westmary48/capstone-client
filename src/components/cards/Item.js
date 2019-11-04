@@ -31,9 +31,9 @@ const Item = props => {
               {
                 props.showCategory ?
                 <>
-                <p>Category: <Link className="nav-link" to={`/itemcategories/${props.item.item_category.id}`}>
+                <p>Category:
                       {props.item.item_category.name}
-                  </Link></p>
+                  </p>
                   </>
                   :
                   ""

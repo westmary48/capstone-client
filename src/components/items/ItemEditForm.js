@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import useSimpleAuth from "../../hooks/ui/useSimpleAuth"
 
 
 const EditItem = props => {
@@ -12,7 +11,6 @@ const EditItem = props => {
   const size = useRef();
   const quantity = useRef();
   const item_category = useRef();
-  const { isAuthenticated } = useSimpleAuth()
 
   const getSingleItem = id => {
     return fetch(`http://localhost:8000/items/${id}`, {
