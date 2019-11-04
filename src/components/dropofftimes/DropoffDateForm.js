@@ -30,7 +30,7 @@ const DropoffDateForm = props => {
           })
               .then(response => response.json())
               .then(() => {
-                props.history.push("/dropoff/options")
+                props.history.push("/profile")
               })
 
       }
