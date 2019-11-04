@@ -51,6 +51,19 @@ const Item = props => {
                 :
                 ""
               }
+              {
+                +props.item.donator.id === +localStorage.getItem("id") ?
+                <>
+                    <button onClick={() => {
+                          props.history.push(`/edititem/${props.item.id}`);
+                        }} className="edit">
+                      <a href={`/edititem/${props.item.id}`}>Edit</a>
+                    </button>
+                    </>
+
+                :
+                ""
+              }
             </div>
           </div>
 
