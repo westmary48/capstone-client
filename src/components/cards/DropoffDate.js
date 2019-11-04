@@ -28,7 +28,7 @@ const DropoffTime = props => {
             <div className="card-body">
               <h5 className="card-title">{props.dropoffTypes.name}</h5>
               <p className="card-text">Dropoff Date: {oldDate}</p>
-              <button onClick={deleteDropoff} className={`btn btn-primary paymentType-delete-${props.dropoffTypes.id}`}>Delete</button>
+              <button onClick={deleteDropoff} className={`btn btn-primary${props.dropoffTypes.id}`}>Delete</button>
             </div>
           </div>
 

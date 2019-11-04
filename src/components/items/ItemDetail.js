@@ -67,12 +67,6 @@ const ItemDetail = props => {
         }
     }
 
-//     const renderUpdateBtn = () => {
-//         if ((+props.item.donator.id === +localStorage.getItem("id")) && (itemQuantity === 0)) {
-//             window.addEventListener("keyup", handler)
-//             return <button className="item" id="update-btn" onClick={toggleDialog}>Update</button>
-//     }
-// }
     const updateItemQuantity = (e) => {
         if (isAuthenticated() && quantity.current.value > 0 && quantity.current.value % 1 === 0) {
             fetch(`http://localhost:8000/items/${props.item.id}`, {
@@ -124,7 +118,6 @@ const ItemDetail = props => {
 
                     <div id="product-quantity">
                     <h4>Quantity: {itemQuantity}</h4>
-                    {/* {renderUpdateBtn()} */}
                     </div>
                     {
                       isAuthenticated() ?

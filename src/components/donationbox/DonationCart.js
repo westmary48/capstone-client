@@ -96,12 +96,12 @@ const DonationboxCart = (props) => {
         <>
           <h2>Items in your Donationbox:</h2>
           <div className="orderBtn-Div">
-            <button onClick={() => {
+            <button className="btn btn-info"onClick={() => {
               props.history.push("/cart/addDropoff")
             }}>
             Complete Donationbox
             </button>
-            <button onClick={deleteCart}
+            <button className="btn btn-secondary"onClick={deleteCart}
             >
             Delete Donationbox
             </button>
@@ -114,7 +114,7 @@ const DonationboxCart = (props) => {
                     return (
                         <div key={itemQuantities[key][2]}>
                         <ItemCart key={itemQuantities[key][2]} itemId={key} quantity={itemQuantities[key][0]}/>
-                        <button onClick={() => {
+                        <button className="btn btn-danger" onClick={() => {
                             deleteItemDonationbox(itemQuantities[key][2])
                             getDonationboxes()
                             }} >delete</button>

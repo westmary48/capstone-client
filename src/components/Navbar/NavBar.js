@@ -10,13 +10,9 @@ const NavBar = props => {
     return (
         <nav className="navbar navbar-light light-blue flex-md-nowrap p-0 shadow">
             <ul className="nav nav-pills nav-fill">
-                <li className="nav-item">
+                {/* <li className="nav-item">
                     <Link className="nav-link" to="/">Home</Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link" to="/itemcategories">ItemCategories</Link>
-                </li>
-
+                </li> */}
 
                 {
                     isAuthenticated() ?
@@ -31,7 +27,10 @@ const NavBar = props => {
                             <Link className="nav-link" to="/cart">DonationBox</Link>
                         </li>
                         <li className="nav-item">
-                            <button className="nav-link fakeLink"
+                    <Link className="nav-link" to="/itemcategories">ItemCategories</Link>
+                        </li>
+                        <li className="nav-item">
+                            <button className=" btn btn-info nav-link fakeLink"
                                 onClick={() => {
                                     logout()
                                     props.history.push({

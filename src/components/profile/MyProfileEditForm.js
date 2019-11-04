@@ -45,7 +45,7 @@ const ProfileEditForm = props => {
 
   return (
     <>
-      <h1>Edit Profile</h1>
+      <h1 className = "edit-title">Edit Profile</h1>
       <form className="profileList" onSubmit={(e) => {
         e.preventDefault()
         updateProfile()
@@ -87,7 +87,7 @@ const ProfileEditForm = props => {
           name="address"
           required></input>
         </fieldset>
-        <button type="submit">Update Profile</button>
+        <button className="btn btn-info" type="submit">Update Profile</button>
       </form>
     </>
   )
