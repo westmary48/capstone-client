@@ -45,7 +45,7 @@ const ItemForm = props => {
         .then(() => {
             console.log("Added")
             props.getItems()
-            props.history.push("/")
+            props.history.push("/myItems")
         })
     }
     }

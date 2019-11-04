@@ -31,6 +31,12 @@ const Item = props => {
               {
                 props.showCategory ?
                 <>
+                <p>Description:
+                      {props.item.description}
+                  </p>
+                  <p>Size:
+                      {props.item.size}
+                  </p>
                 <p>Category:
                       {props.item.item_category.name}
                   </p>

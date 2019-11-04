@@ -21,6 +21,8 @@ const MyItems = props => {
               .then(response => response.json())
               .then(setMyItems)
       }
+
+
     useEffect(getMyItems, [])
 
     return(
