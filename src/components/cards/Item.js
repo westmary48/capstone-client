@@ -31,9 +31,9 @@ const Item = props => {
               {
                 props.showCategory ?
                 <>
-                <p>Category: <Link className="nav-link" to={`/itemcategories/${props.item.item_category.id}`}>
+                <p>Category:
                       {props.item.item_category.name}
-                  </Link></p>
+                  </p>
                   </>
                   :
                   ""
@@ -48,6 +48,19 @@ const Item = props => {
                     }
                     }}>Delete Item</button>
                 </>
+                :
+                ""
+              }
+              {
+                +props.item.donator.id === +localStorage.getItem("id") ?
+                <>
+                    <button onClick={() => {
+                          props.history.push(`/edititem/${props.item.id}`);
+                        }} className="edit">
+                      <a href={`/edititem/${props.item.id}`}>Edit</a>
+                    </button>
+                    </>
+
                 :
                 ""
               }

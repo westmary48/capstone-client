@@ -18,6 +18,7 @@ import DonationCart from './donationbox/DonationCart'
 import CompleteDonationbox from './donationbox/CompleteDonationbox'
 import DropoffDates from "./dropofftimes/DropoffDates"
 import DropoffDateForm from './dropofftimes/DropoffDateForm'
+import ItemEditForm from './items/ItemEditForm'
 
 
 const ApplicationViews = () => {
@@ -239,6 +240,16 @@ useEffect(() => {
                     else return <Redirect to="/login"/>
                 }}
             />
+              <Route
+                path="/edititem/:itemId(\d+)"
+                render={props => {
+                  return (
+                    <>
+                      <ItemEditForm {...props} />
+                    </>
+                  );
+                }}
+              />
 
         </React.Fragment>
     )
