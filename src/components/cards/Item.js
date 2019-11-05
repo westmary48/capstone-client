@@ -20,7 +20,6 @@ const Item = props => {
   }
     return (
         <>
-
           <div className={`card product-${props.item.id}`} style={{width: "18rem"}}>
             <div className="card-body">
               <section className="product">
@@ -44,7 +43,7 @@ const Item = props => {
                   :
                   ""
               }
-              <p className="p-2">Quantity: <b>{props.item.quantity}</b> <font size="1">available</font></p>
+              <p className="p-2">Quantity: <b>{props.item.quantity}</b> </p>
               {
                 +props.item.donator.id === +localStorage.getItem("id") ?
                 <>
@@ -60,10 +59,10 @@ const Item = props => {
               {
                 +props.item.donator.id === +localStorage.getItem("id") ?
                 <>
-                    <button onClick={() => {
+                    <button className="buttons" onClick={() => {
                           props.history.push(`/edititem/${props.item.id}`);
-                        }} className="edit">
-                      <a href={`/edititem/${props.item.id}`}>Edit</a>
+                        }} >
+                      <a href={`/edititem/${props.item.id}`}>Edit Item</a>
                     </button>
                     </>
 

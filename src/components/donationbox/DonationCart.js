@@ -11,6 +11,7 @@ const DonationboxCart = (props) => {
     const { isAuthenticated } = useSimpleAuth()
 
     const getItemDonationboxes = (data) => {
+        console.log(data)
         if (data.length !== 0)
         {
             setDonationbox(data[0])

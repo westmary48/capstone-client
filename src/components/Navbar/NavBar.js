@@ -26,9 +26,9 @@ const NavBar = props => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/cart">DonationBox</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                     <Link className="nav-link" to="/itemcategories">ItemCategories</Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <button className="nav-button nav-link fakeLink"
                                 onClick={() => {

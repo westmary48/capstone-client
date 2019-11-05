@@ -52,6 +52,8 @@ const ItemForm = props => {
 
     return (
         <React.Fragment>
+            <div className = "container">
+            <div className= "edit-title-one">Add Item</div>
             <form className = "profileList">
                 <div>
                     <label htmlFor="name">Name:</label>
@@ -103,7 +105,7 @@ const ItemForm = props => {
                     name="item_category"
                     ref={item_category_value}
                     required>
-                    <option defaultValue value = "0"> -- select an option -- </option>
+                    <option defaultValue value = "0"> -- select clothing category -- </option>
                     {
                         props.categories.map(category =>
                             <option  key={category.id} value={category.id}>{category.name}</option>
@@ -115,6 +117,7 @@ const ItemForm = props => {
                     <button className="btn button" onClick={addItem}
                     >Add Clothing Item</button>
             </form>
+            </div>
         </React.Fragment>
     )
 }

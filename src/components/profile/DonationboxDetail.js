@@ -30,7 +30,7 @@ const DonationBoxDetail = props => {
     itemDonationBoxes.map(itemDonationBox => {
 
         if (itemQuantities[itemDonationBox.item.id]) {
-            itemQuantities[itemDonationBox.item.id][0]++
+            // itemQuantities[itemDonationBox.item.id][0]++
         }
         else {
             itemQuantities[itemDonationBox.item.id] = [1, itemDonationBox.item.size, itemDonationBox.id, itemDonationBox.item.name]
@@ -51,10 +51,10 @@ const DonationBoxDetail = props => {
                     {
                         Object.keys(itemQuantities).map(function(key) {
                             return (
-                            <div key={itemQuantities[key][2]}>
+                            // <div key={itemQuantities[key][2]}>
 
-                                <p className="donationbox-list"> {itemQuantities[key][0]} {itemQuantities[key][3]} </p>
-                            </div>
+                                <p className="donationbox-list"> {itemQuantities[key][0]} {itemQuantities[key][1]} </p>
+                    //  </div>
                     )
                         })
                     }
