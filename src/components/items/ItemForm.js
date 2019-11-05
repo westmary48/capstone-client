@@ -52,7 +52,7 @@ const ItemForm = props => {
 
     return (
         <React.Fragment>
-            <form>
+            <form className = "profileList">
                 <div>
                     <label htmlFor="name">Name:</label>
                     <input
@@ -98,8 +98,8 @@ const ItemForm = props => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="item_category">Clothing Category:</label>
-                    <select
+                    {/* <label htmlFor="item_category">Category:</label> */}
+                    <select className="select-css"
                     name="item_category"
                     ref={item_category_value}
                     required>
@@ -112,7 +112,7 @@ const ItemForm = props => {
                     </select>
 
                 </div>
-                    <button className="btn btn-info" onClick={addItem}
+                    <button className="btn button" onClick={addItem}
                     >Add Clothing Item</button>
             </form>
         </React.Fragment>

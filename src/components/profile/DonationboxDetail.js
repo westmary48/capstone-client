@@ -8,6 +8,7 @@ const DonationBoxDetail = props => {
 
 
     const getItemDonationBoxes = () => {
+        console.log(props.donationbox.id)
             fetch(`http://localhost:8000/itemdonationboxes?donationbox_id=${props.donationbox.id}`, {
                 "method": "GET",
                 "headers": {
@@ -43,16 +44,16 @@ const DonationBoxDetail = props => {
     return (
         <>
             {
-                <section className="order-details">
-                    <h3>Donation Box {props.donationbox.id}</h3>
-                    <h4>Items:</h4>
-                    <div id="parent">
+                <section className="donationbox-details">
+                    {/* <h3>Donation Box {props.donationbox.id}</h3> */}
+                    {/* <h4>Items:</h4> */}
+                    <div id="item-details">
                     {
                         Object.keys(itemQuantities).map(function(key) {
                             return (
-                            <div key={itemQuantities[key][2]} id="productRating">
+                            <div key={itemQuantities[key][2]}>
 
-                                <p>{itemQuantities[key][3]} (Quantity: {itemQuantities[key][0]})</p>
+                                <p className="donationbox-list"> {itemQuantities[key][0]} {itemQuantities[key][3]} </p>
                             </div>
                     )
                         })

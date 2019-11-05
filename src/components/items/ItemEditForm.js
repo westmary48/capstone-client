@@ -127,7 +127,7 @@ const EditItem = props => {
             </div>
 
             <br />
-            <button onClick={() => updateItems(categoriesInfo, categoriesInfo.id)}>
+            <button className="btn" onClick={() => updateItems(categoriesInfo, categoriesInfo.id)}>
               Update Item
             </button>
           </div>

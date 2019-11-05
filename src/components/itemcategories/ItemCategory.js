@@ -27,7 +27,7 @@ const ItemCategory = props => {
         <>
             { items.length > 0 ?
               <article className="categoryList">
-                <Link className="nav-link" to={`/itemcategories/${props.category.id}`}>
+                <Link className="link-nav-link" to={`/itemcategories/${props.category.id}`}>
                 <h3>{props.category.name}({items.length})</h3>
                 </Link>
                 { props.showThree ?

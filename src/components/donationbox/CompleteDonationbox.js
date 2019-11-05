@@ -84,12 +84,12 @@ const CompleteDonationbox = props => {
                         )
                     }
                 </select>
-                <button type="submit">Add Dropoff Date</button>
+                <button className = "btn"type="submit">Add Dropoff Date</button>
                 </form>
               </>
               :
               <>
-                <Link className="nav-link" to="/dropoff/create">
+                <Link className="link-nav-link" to="/dropoff/create">
                   <h6>Add some Dropoff Options!</h6>
                 </Link>
               </>

@@ -69,7 +69,7 @@ const DonationboxCart = (props) => {
         itemDonationboxes.forEach(itemDonationbox => {
           deleteItemDonationbox(itemDonationbox.id)
         })
-        props.history.push("/")
+        props.history.push("/myItems")
     }
 
     useEffect(getDonationboxes, [])
@@ -114,8 +114,8 @@ const DonationboxCart = (props) => {
                     return (
                         <div key={itemQuantities[key][2]}>
                         <ItemCart key={itemQuantities[key][2]} itemId={key} quantity={itemQuantities[key][0]}/>
-                        <button className="btn btn-danger" onClick={() => {
-                            deleteItemDonationbox(itemQuantities[key][2])
+                        <button className="btn" onClick={() => {
+                            deleteItemDonationbox(itemQuantities[key][1])
                             getDonationboxes()
                             }} >delete</button>
                         </div>
@@ -127,8 +127,8 @@ const DonationboxCart = (props) => {
         </>
           :
           <>
-          <h1>No items in Donation box!</h1>
-          <Link className="nav-link" to="/myitems">
+          <h1 className = "item-title">No items in Donation box!</h1>
+          <Link className="link-nav-link" to="/items/new">
             Add Clothing Items
           </Link>
           </>

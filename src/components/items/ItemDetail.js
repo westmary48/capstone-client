@@ -106,23 +106,19 @@ const ItemDetail = props => {
 
             </dialog>
             {
-                <section className="product-details">
-                    <h3>{props.item.name}</h3>
-                    <div className = "col">
-                    <div className = "row">
-                    <h4><font size="1">Donated By: {props.item.donator.user.first_name} {props.item.donator.user.last_name}</font></h4>
-                    </div>
-                    </div>
-                    <h5>{props.item.size}</h5>
-                    <p>{props.item.description}</p>
+                <section className="item-details">
+                    <h3>Name: {props.item.name}</h3>
+                    <h3>Donator: {props.item.donator.user.first_name} {props.item.donator.user.last_name}</h3>
+                    <h3>Size: {props.item.size}</h3>
+                    <h3>Description: {props.item.description}</h3>
 
                     <div id="product-quantity">
-                    <h4>Quantity: {itemQuantity}</h4>
+                    <h3>Quantity: {itemQuantity}</h3>
                     </div>
                     {
                       isAuthenticated() ?
                       (count_cart < props.item.quantity) && (+props.item.donator.id === +localStorage.getItem("id")) ?
-                      <button onClick={() => {
+                      <button className="btn" onClick={() => {
                         if (count_cart < props.item.quantity) {
                           addToDonationbox()
                           setCount_Cart(count_cart+1)

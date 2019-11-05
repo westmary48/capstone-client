@@ -8,8 +8,8 @@ const DonationboxList = props => {
         <>
             {
                 <section className="order-details">
-                    <Link className="nav-link" to={`/donationboxhistory/${props.donationbox.id}`}>
-                        <h3>Order {props.donationbox.id}</h3>
+                    <Link className="link-nav-link" to={`/donationboxhistory/${props.donationbox.id}`}>
+                        <h3>Donation Box {props.donationbox.id}</h3>
                     </Link>
 
                 </section>

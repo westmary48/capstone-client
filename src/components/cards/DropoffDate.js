@@ -4,7 +4,7 @@ import useSimpleAuth from "../../hooks/ui/useSimpleAuth"
 const DropoffTime = props => {
 
 
-    const oldDate = props.dropoffTypes.dropoff_date.slice(0,7)
+    const oldDate = props.dropoffTypes.dropoff_date
     const { isAuthenticated } = useSimpleAuth()
 
 
