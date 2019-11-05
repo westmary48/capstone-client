@@ -7,6 +7,8 @@ import './index.css'
 
 ReactDOM.render(
   <Router>
-      <CapstoneBuilder />
+      <CapstoneBuilder
+       />
   </Router>
+
   , document.getElementById('root'))

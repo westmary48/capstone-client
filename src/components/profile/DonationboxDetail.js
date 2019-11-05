@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react"
+import Doc from '../DocService';
+import PdfContainer from '../pdf/PdfContainer';
 
 
 
 const DonationBoxDetail = props => {
     const [itemDonationBoxes, setItemDonationBoxes] = useState([])
-
 
 
     const getItemDonationBoxes = () => {
@@ -22,6 +23,8 @@ const DonationBoxDetail = props => {
     }
 
     useEffect(getItemDonationBoxes, [])
+
+    const createPdf = (html) => Doc.createPdf(html);
 
     let itemQuantities = {}
     let total = 0
@@ -45,6 +48,7 @@ const DonationBoxDetail = props => {
         <>
             {
                 <section className="donationbox-details">
+                     <PdfContainer createPdf={createPdf}>
                     {/* <h3>Donation Box {props.donationbox.id}</h3> */}
                     {/* <h4>Items:</h4> */}
                     <div id="item-details">
@@ -59,6 +63,8 @@ const DonationBoxDetail = props => {
                         })
                     }
                     </div>
+
+                    </PdfContainer>
                 </section>
             }
         </>
