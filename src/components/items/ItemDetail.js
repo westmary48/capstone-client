@@ -7,7 +7,7 @@ const ItemDetail = props => {
     const [itemDonationBox, setItemDonationBox] = useState([])
     const [itemQuantity, setItemQuantity] = useState(props.item.quantity)
     const { isAuthenticated } = useSimpleAuth()
-    const [count_cart, setCount_Cart] = useState(0)
+    const [count_cart, setCount_Cart] = useState([])
     let dialog = document.querySelector("#dialog--time")
     const [isOpen, setIsOpen] = useState(false)
     const quantity = useRef()
@@ -31,7 +31,8 @@ const ItemDetail = props => {
                 })
                 .then(response => response.json())
                 .then(data => {
-                  setItemDonationBox(data)
+                console.log(data[0])
+                  setItemDonationBox(data[0])
                   setCount_Cart(data.length)
                 })
     }

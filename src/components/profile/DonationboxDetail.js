@@ -8,8 +8,8 @@ const DonationBoxDetail = props => {
     const [itemDonationBoxes, setItemDonationBoxes] = useState([])
 
 
-    const getItemDonationBoxes = () => {
-        console.log(props.donationbox.id)
+    const getItemDonation = () => {
+        console.log("use effect?", props.donationbox.id)
             fetch(`http://localhost:8000/itemdonationboxes?donationbox_id=${props.donationbox.id}`, {
                 "method": "GET",
                 "headers": {
@@ -22,53 +22,53 @@ const DonationBoxDetail = props => {
                 .then(setItemDonationBoxes)
     }
 
-    useEffect(getItemDonationBoxes, [])
+    useEffect(getItemDonation, [])
 
     const createPdf = (html) => Doc.createPdf(html);
 
     let itemQuantities = {}
-    let total = 0
 
 
     itemDonationBoxes.map(itemDonationBox => {
-
+        console.log(itemQuantities)
         if (itemQuantities[itemDonationBox.item.id]) {
-            // itemQuantities[itemDonationBox.item.id][0]++
+            itemQuantities[itemDonationBox.item.id][0]++
         }
         else {
-            itemQuantities[itemDonationBox.item.id] = [1, itemDonationBox.item.size, itemDonationBox.id, itemDonationBox.item.name]
+            console.log(itemQuantities)
+            itemQuantities[itemDonationBox.item.id] = [1, itemDonationBox.item.name, itemDonationBox.id ]
         }
     })
 
-    Object.keys(itemQuantities).map(function(key) {
-        total += (itemQuantities[key][0] * itemQuantities[key][1])
-    })
 
     return (
         <>
+
+        {
+        <section className="donationbox-details">
+        <PdfContainer createPdf={createPdf}>
+            <h3>Donation Box {props.donationbox.id}</h3>
+            <h4>Items:</h4>
+            <div id="item-details">
             {
-                <section className="donationbox-details">
-                     <PdfContainer createPdf={createPdf}>
-                    {/* <h3>Donation Box {props.donationbox.id}</h3> */}
-                    {/* <h4>Items:</h4> */}
-                    <div id="item-details">
-                    {
-                        Object.keys(itemQuantities).map(function(key) {
-                            return (
-                            // <div key={itemQuantities[key][2]}>
+                Object.keys(itemQuantities).map(function(key) {
+                    return (
+                    <div key={itemQuantities[key][1]}>
 
-                                <p className="donationbox-list"> {itemQuantities[key][0]} {itemQuantities[key][1]} </p>
-                    //  </div>
-                    )
-                        })
-                    }
-                    </div>
-
-                    </PdfContainer>
-                </section>
+                     <p className="donationbox-list"> {itemQuantities[key][0]} {itemQuantities[key][1]} </p>
+              </div>
+            )
+                })
             }
+            </div>
+
+            </PdfContainer>
+        </section>
+    }
         </>
     )
 }
 
 export default DonationBoxDetail
+
+
