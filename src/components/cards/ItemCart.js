@@ -25,11 +25,11 @@ const ItemCart = (props) => {
             <div className={`card product-${item.id}`} style={{width: "18rem"}}>
                 <div className="card-body">
                 <section className="product">
-                    <Link className="nav-link" to={`/items/${item.id}`}>
+                    <Link className="link-nav-link" to={`/items/${item.id}`}>
                         <h5>{item.name}</h5>
                     </Link>
                 </section>
-              <p className="card-text">Quantity: <b>{props.quantity}</b></p>
+              {/* <p className="card-text">Quantity: <b>{props.quantity}</b></p> */}
                 </div>
             </div>
         </>

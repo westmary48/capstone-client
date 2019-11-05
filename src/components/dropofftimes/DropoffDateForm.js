@@ -39,25 +39,25 @@ const DropoffDateForm = props => {
 
   return (
     <>
-      <h1>Create a Dropoff Option</h1>
+      <h1 className = "edit-title">Create a Dropoff Option</h1>
       <form className="categoryList" onSubmit={(e) => {
         e.preventDefault()
         createDropoffDate()
       }}>
         <fieldset>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Name</label>
           <input type="text" ref={name} name="name" required></input>
         </fieldset>
         <fieldset>
-          <label htmlFor="organization">Organization Name:</label>
+          <label htmlFor="organization">Organization</label>
           <input type="text" ref={organization} name="organization" required></input>
         </fieldset>
         <fieldset>
-          <label htmlFor="dropoff-date">Dropoff Date:</label>
+          <label htmlFor="dropoff-date">Dropoff Date</label>
           <input type="month" ref={dropoffDate} name="dropoff-date" min={new Date().toISOString().slice(0,7)} required></input>
         </fieldset>
         <input type="date" ref={createDate} name="expire-date" defaultValue={new Date().toISOString().slice(0,10)} hidden></input>
-        <button type="submit">Add Dropoff</button>
+        <button className="btn" type="submit">Add Dropoff</button>
       </form>
     </>
   )

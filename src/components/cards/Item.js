@@ -20,31 +20,30 @@ const Item = props => {
   }
     return (
         <>
-
           <div className={`card product-${props.item.id}`} style={{width: "18rem"}}>
             <div className="card-body">
               <section className="product">
-                  <Link className="link-nav-link" to={`/items/${props.item.id}`}>
+                  <Link className="link-nav-link center" to={`/items/${props.item.id}`}>
                       <h5>{props.item.name}</h5>
                   </Link>
               </section>
               {
                 props.showCategory ?
                 <>
-                <p>Description:
+                <p className="p-2">Description:
                       {props.item.description}
                   </p>
-                  <p>Description:
+                  <p className="p-2">Size:
                       {props.item.size}
                   </p>
-                <p>Category:
+                <p className="p-2">Category:
                       {props.item.item_category.name}
                   </p>
                   </>
                   :
                   ""
               }
-              <p className="card-text">Quantity: <b>{props.item.quantity}</b> <font size="1">available</font></p>
+              <p className="p-2">Quantity: <b>{props.item.quantity}</b> </p>
               {
                 +props.item.donator.id === +localStorage.getItem("id") ?
                 <>
@@ -60,10 +59,10 @@ const Item = props => {
               {
                 +props.item.donator.id === +localStorage.getItem("id") ?
                 <>
-                    <button onClick={() => {
+                    <button className="buttons" onClick={() => {
                           props.history.push(`/edititem/${props.item.id}`);
-                        }} className="edit">
-                      <a href={`/edititem/${props.item.id}`}>Edit</a>
+                        }} >
+                      <a href={`/edititem/${props.item.id}`}>Edit Item</a>
                     </button>
                     </>
 

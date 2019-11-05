@@ -71,10 +71,10 @@ const EditItem = props => {
     <>
       <div className="edit-form col"></div>
       {items.id ? (
-        <div key={items.id} className="card card-edit">
+        <div key={items.id} className="">
           <div className="form">
-            <div>
-              Name:
+            <fieldset>
+              <label>Name:</label>
               <input
                 ref={name}
                 type="text"
@@ -82,9 +82,9 @@ const EditItem = props => {
                 defaultValue={items.name}
                 required
               ></input>
-            </div>
-            <div>
-              Description:
+            </fieldset>
+            <fieldset>
+              <label>Description:</label>
               <input
                 ref={description}
                 type="text"
@@ -92,9 +92,9 @@ const EditItem = props => {
                 defaultValue={items.description}
                 required
               ></input>
-            </div>
-            <div>
-              Size:
+            </fieldset>
+            <fieldset>
+              <label>Size:</label>
               <input
                 ref={size}
                 type="text"
@@ -102,9 +102,9 @@ const EditItem = props => {
                 defaultValue={items.size}
                 required
               ></input>
-            </div>
-            <div>
-              Quantity:
+            </fieldset>
+            <fieldset>
+              <label>Quantity:</label>
               <input
                 ref={quantity}
                 type="number"
@@ -112,10 +112,10 @@ const EditItem = props => {
                 defaultValue={items.quantity}
                 required
               ></input>
-            </div>
-            <div>
-              Category:
-              <select type="text" name="category" ref={item_category}>
+            </fieldset>
+            <fieldset>
+              <label>Category:</label>
+              <select className="select-css" type="text" name="category" ref={item_category}>
                 {categoriesInfo.map(item_category => {
                   return (
                     <option key={item_category.id} id={item_category.id} value={item_category.id}>
@@ -124,10 +124,10 @@ const EditItem = props => {
                   );
                 })}
               </select>
-            </div>
+            </fieldset>
 
             <br />
-            <button onClick={() => updateItems(categoriesInfo, categoriesInfo.id)}>
+            <button className="btn" onClick={() => updateItems(categoriesInfo, categoriesInfo.id)}>
               Update Item
             </button>
           </div>

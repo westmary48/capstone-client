@@ -27,7 +27,7 @@ const MyItems = props => {
 
     return(
         <>
-          <h1>My Items{myItems ? `(${myItems.length})` : ""}</h1>
+          <h1 className = "item-title">My Items{myItems ? `(${myItems.length})` : ""}</h1>
 
           {isAuthenticated() ?
 

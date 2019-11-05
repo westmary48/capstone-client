@@ -39,7 +39,7 @@ const Profile = props => {
       <>
         <main className="explorer">
           <div>
-            <ul>
+            <div className = "info">
               <p className = "p">
                 <b>First Name:</b> {donator.user.first_name}
               </p>
@@ -55,7 +55,7 @@ const Profile = props => {
               <p className = "p">
                 <b>Address:</b> {donator.address}
               </p>
-            </ul>
+            </div>
             <Link className="link-nav-link" to = {{
                 pathname: "/profile/update",
                 state: donator

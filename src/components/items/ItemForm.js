@@ -52,7 +52,9 @@ const ItemForm = props => {
 
     return (
         <React.Fragment>
-            <form>
+            <div className = "container">
+            <div className= "edit-title-one">Add Item</div>
+            <form className = "profileList">
                 <div>
                     <label htmlFor="name">Name:</label>
                     <input
@@ -98,12 +100,12 @@ const ItemForm = props => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="item_category">Clothing Category:</label>
-                    <select
+                    {/* <label htmlFor="item_category">Category:</label> */}
+                    <select className="select-css"
                     name="item_category"
                     ref={item_category_value}
                     required>
-                    <option defaultValue value = "0"> -- select an option -- </option>
+                    <option defaultValue value = "0"> -- select clothing category -- </option>
                     {
                         props.categories.map(category =>
                             <option  key={category.id} value={category.id}>{category.name}</option>
@@ -112,9 +114,10 @@ const ItemForm = props => {
                     </select>
 
                 </div>
-                    <button className="btn btn-info" onClick={addItem}
+                    <button className="btn button" onClick={addItem}
                     >Add Clothing Item</button>
             </form>
+            </div>
         </React.Fragment>
     )
 }
