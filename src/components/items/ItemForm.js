@@ -53,7 +53,7 @@ const ItemForm = props => {
     return (
         <React.Fragment>
             <div className = "container">
-            <div className= "edit-title-one">Add Item</div>
+            <div className= "item-title">Add Item</div>
             <form className = "profileList">
                 <div>
                     <label htmlFor="name">Name:</label>

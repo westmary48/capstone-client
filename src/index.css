@@ -1,7 +1,6 @@
 body {
   margin: 0;
   /* background-image: url(./components/images/background.png); */
-  background: url(https://image.freepik.com/free-vector/collection-clothes_23-2147515986.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,7 +20,7 @@ code {
 .navbar {
   display: flex;
   justify-content: space-around;
-  background:salmon;
+  background:#101357;
   size: 40px
 }
 
@@ -32,8 +31,8 @@ color:white;
 .add-link{
   display: flex;
   justify-content: space-around;
-  font-size: 60px;
-  color: #69A583;
+  font-size: 40px;
+  color:#fbaf08;
   min-height: 80px;
 }
 
@@ -99,8 +98,9 @@ input {
 }
 
 .link-nav-link {
-  font-size: 30px;
-  color: salmon;
+  text-align: center;
+  font-size: 40px;
+  color: #fea49f;
 }
 
 .p {
@@ -112,9 +112,9 @@ input {
 .item-title {
   display: flex;
   justify-content: center;
-  font: 900 110px/1 'Source Sans Pro',
+  font: 700 90px/1 'Source Sans Pro',
   Arial, sans-serif; text-transform:
-  uppercase; color: white;
+  uppercase; color:#fea49f;
   margin: auto;
   text-align: center;
 justify-content:center;
@@ -139,16 +139,16 @@ justify-content:center;
 }
 
 .nav-button {
-  background: #69A583 ;;
+  background: #007f4f;
 }
 
 .p-2 {
   font-size: 20px;
-  color:#9F0251;
+  color: #101357;
 }
 
 .btn {
-  background:#4D8963;
+  background:#fbaf08;
 }
 
 label {
@@ -299,17 +299,23 @@ button {
 
 .buttons{
   float: right;
-  background: #EC799A;
+  background:#fea49f;
 }
 
-.edit-title-one{
-  font-size: 40px;
-  background:#9F0251 none repeat scroll 0% 0%;
-  color: rgb(255, 255, 255);
-  padding: 30px 30px;
-  border-radius: 5px 5px 0px 0px;
-  margin: auto;
-  text-shadow: none;
-  text-align:center;
+.meh{
+  width: 300px;
+  padding: 10px;
+  border: 5px solid #007f4f;
+  border-radius: rounded;
+  margin: 0;
 }
+
+.myProducts-Div{
+  display: flex;
+  flex: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+
 

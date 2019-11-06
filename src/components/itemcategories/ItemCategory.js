@@ -31,7 +31,7 @@ const ItemCategory = props => {
                 <h3>{props.category.name}({items.length})</h3>
                 </Link>
                 { props.showThree ?
-                  <div className={`productDiv category-${props.category.id}`}>
+                  <div className={`myProducts-Div category-${props.category.id}`}>
                   {
                     items.map(item =>
                       <Item key={item.id} item={item} showCategory={false} />
@@ -39,7 +39,7 @@ const ItemCategory = props => {
                   }
                 </div>
                 :
-                <div className={`productDiv category-${props.category.id}`}>
+                <div className={`myProducts-Div category-${props.category.id}`}>
                   {
                       items.map(item =>
                           <Item key={item.id} item={item} showCategory={false} />

@@ -45,7 +45,7 @@ const ProfileEditForm = props => {
 
   return (
     <>
-      <h1 className = "edit-title">Edit Profile</h1>
+      <h1 className = "item-title">Edit Profile</h1>
       <form className="profileList" onSubmit={(e) => {
         e.preventDefault()
         updateProfile()

@@ -34,7 +34,7 @@ const MyItems = props => {
           <a href='/items/new'>
               <h4 className="add-link">Add Clothing Item</h4>
               </a> : ""}
-          <div className="myProducts-Div">
+          <div className="myProducts-Div ">
           {myItems.length > 0 ?
           myItems.map(item =>{
               return( <Item key={item.id} item={item} showCategory={true}  getMyItems={getMyItems} /> )

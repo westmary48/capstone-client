@@ -10,9 +10,6 @@ const NavBar = props => {
     return (
         <nav className="navbar navbar-light light-blue flex-md-nowrap p-0 shadow">
             <ul className="nav nav-pills nav-fill">
-                {/* <li className="nav-item">
-                    <Link className="nav-link" to="/">Home</Link>
-                </li> */}
 
                 {
                     isAuthenticated() ?
@@ -26,9 +23,12 @@ const NavBar = props => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/cart">DonationBox</Link>
                         </li>
-                        {/* <li className="nav-item">
+                        <li className="nav-item">
+                    <Link className="nav-link" to="/">Items</Link>
+                </li>
+                         <li className="nav-item">
                     <Link className="nav-link" to="/itemcategories">ItemCategories</Link>
-                        </li> */}
+                        </li>
                         <li className="nav-item">
                             <button className="nav-button nav-link fakeLink"
                                 onClick={() => {

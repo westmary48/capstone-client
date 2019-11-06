@@ -69,7 +69,7 @@ const EditItem = props => {
 
   return (
     <>
-      <div className="edit-form col"></div>
+      <form className="item-title col">Edit Item</form>
       {items.id ? (
         <div key={items.id} className="">
           <div className="form">

@@ -20,8 +20,8 @@ const Item = props => {
   }
     return (
         <>
-          <div className={`card product-${props.item.id}`} style={{width: "18rem"}}>
-            <div className="card-body">
+          <div className={`hello-${props.item.id}`} style={{width: "18rem"}}>
+            <div className="meh">
               <section className="product">
                   <Link className="link-nav-link center" to={`/items/${props.item.id}`}>
                       <h5>{props.item.name}</h5>

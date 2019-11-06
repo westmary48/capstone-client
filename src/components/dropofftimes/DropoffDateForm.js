@@ -39,7 +39,7 @@ const DropoffDateForm = props => {
 
   return (
     <>
-      <h1 className = "edit-title">Create a Dropoff Option</h1>
+      <h1 className = "item-title">Drop Off Information</h1>
       <form className="categoryList" onSubmit={(e) => {
         e.preventDefault()
         createDropoffDate()

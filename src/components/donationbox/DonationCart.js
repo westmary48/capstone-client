@@ -96,7 +96,7 @@ const DonationboxCart = (props) => {
         <>
         {itemDonationboxes.length > 0 ?
         <>
-          <h2>Items in your Donationbox:</h2>
+          <h2 className="item-title">Donationbox</h2>
           <div className="orderBtn-Div">
             <button className="btn btn-info"onClick={() => {
               props.history.push("/cart/addDropoff")
