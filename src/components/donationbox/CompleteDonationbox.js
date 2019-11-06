@@ -47,7 +47,7 @@ const CompleteDonationbox = props => {
               "Authorization": `Token ${localStorage.getItem("capstone_token")}`
             },
             "body": JSON.stringify({
-              "dropoff": +dropoff.current.value
+              "dropoff": dropoff.current.value
           })
         })
         .then(() => {

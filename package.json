@@ -6,11 +6,13 @@
     "@progress/kendo-drawing": "^1.6.0",
     "@progress/kendo-react-pdf": "^3.6.0",
     "bootstrap": "^4.3.1",
+    "emailjs-com": "2.4.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-pdf": "^4.1.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.2.0"
+    "react-scripts": "^3.2.0",
+    "reactstrap": "^8.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -25,6 +25,7 @@ const DonationboxCart = (props) => {
             .then(setItemDonationboxes)
         }
         else {
+            console.log(data)
           setDonationbox(data)
         }
 }
@@ -113,8 +114,8 @@ const DonationboxCart = (props) => {
                 donationbox ?
                 Object.keys(itemQuantities).map(function(key) {
                     return (
-                        <div key={itemQuantities[key][2]}>
-                        <ItemCart key={itemQuantities[key][2]} itemId={key} quantity={itemQuantities[key][0]}/>
+                        <div key={itemQuantities[key][1]}>
+                        <ItemCart key={itemQuantities[key][1]} itemId={key} quantity={itemQuantities[key][0]}/>
                         <button className="btn" onClick={() => {
                             deleteItemDonationbox(itemQuantities[key][1])
                             getDonationboxes()
