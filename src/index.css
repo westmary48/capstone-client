@@ -1,8 +1,7 @@
 body {
   margin: 0;
-  background-color: #FADFB0;
   /* background-image: url(./components/images/background.png); */
-  /* background: url(https://image.freepik.com/free-vector/collection-clothes_23-2147515986.jpg); */
+  background: url(https://image.freepik.com/free-vector/collection-clothes_23-2147515986.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -45,8 +44,7 @@ color:white;
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #FAD099;
-  /* background: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-010-winter-neva.png) no-repeat center center fixed; */
+  background: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-010-winter-neva.png) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;

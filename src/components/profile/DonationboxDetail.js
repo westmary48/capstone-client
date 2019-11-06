@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Doc from '../DocService';
 import PdfContainer from '../pdf/PdfContainer';
+import ContactForm from '../ContactUs';
 
 
 
@@ -25,6 +26,7 @@ const DonationBoxDetail = props => {
     useEffect(getItemDonation, [])
 
     const createPdf = (html) => Doc.createPdf(html);
+
 
     let itemQuantities = {}
 
@@ -63,7 +65,9 @@ const DonationBoxDetail = props => {
             </div>
 
             </PdfContainer>
+            <ContactForm></ContactForm>
         </section>
+
     }
         </>
     )
