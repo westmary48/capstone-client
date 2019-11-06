@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  /* background-image: url(./components/images/background.png); */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -65,16 +64,6 @@ form {
   overflow: hidden;
 }
 
-input {
-  border-radius: 30px;
-  border: 1px solid #eee;
-  margin-bottom: 15px;
-  width: 80%;
-  height: 50px;
-  float: right;
-  padding: 0px 15px;
-  box-shadow: 0 0 1px 3px #69a583;
-}
 
 .edit-title {
   font-size: 40px;
@@ -106,8 +95,8 @@ input {
 }
 
 .p {
-  font-size: 30px;
-  color: #69a583;
+  font-size: 60px;
+  color:#101357;
 }
 
 .item-title {
@@ -217,6 +206,7 @@ label {
 .donationbox-list {
   font-size: 60px;
   color: #69a583;
+  text-align: center;
 }
 
 .container {
@@ -255,10 +245,10 @@ select,
 textarea {
   padding: 8px;
   width: 100%;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 1px solid #bdc3c7;
-  border-left: 0;
+  border-top: 4px solid #007f4f;
+  border-right: 4px solid #007f4f;
+  border-bottom: 4px solid #007f4f;
+  border-left: 4px solid #007f4f;
   transition: border-bottom-color 0.15s ease-in;
 }
 
@@ -290,17 +280,10 @@ button {
   background: #fea49f;
 }
 
-.myProducts-Div {
-  display: flex;
-  flex: wrap;
-  justify-content: space-around;
-  padding: 20px;
-  margin: 20px;
-}
-
 .title {
   font-size: 60px;
   color: #fea49f;
+  text-align: center;
 }
 
 .homePage-Div {
@@ -310,3 +293,36 @@ button {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.card {
+  border-width:3px !important;
+  color: #007f4f;
+  margin:5px;
+}
+
+.info {
+  border-style: solid;
+  border-width:3px !important;
+  border-color: #007f4f;
+  width: 1000px;
+}
+
+.searchbar{
+  text-align: center;
+  color:#101357;
+}
+
+.donationbox-details {
+  float: center!important;
+}
+
+ul {
+  text-align: center;
+  list-style-position: inside;
+}
+
+.search-form{
+  margin-top: -20px !important;
+}
+
+

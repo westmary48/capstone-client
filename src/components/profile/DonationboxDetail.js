@@ -42,7 +42,9 @@ const DonationBoxDetail = props => {
 
   return (
     <>
+     <div className="parent">
       {
+
         <section className="donationbox-details">
           <PdfContainer createPdf={createPdf}>
             <h4 className="title">Donation Box</h4>
@@ -53,7 +55,7 @@ const DonationBoxDetail = props => {
                     <ul>
                       <li className="donationbox-list">
                         {" "}
-                        {itemQuantities[key][1]} ({itemQuantities[key][0]})
+                        {itemQuantities[key][1]} ({itemQuantities[key][0]}) {itemQuantities[key][3]}
                       </li>
                     </ul>
                   </div>
@@ -63,7 +65,9 @@ const DonationBoxDetail = props => {
           </PdfContainer>
           <ContactForm></ContactForm>
         </section>
+
       }
+        </div>
     </>
   );
 };

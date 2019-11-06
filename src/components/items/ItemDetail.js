@@ -60,6 +60,8 @@ const ItemDetail = props => {
       })
         .then(response => response.json())
         .then(getItemDonationBoxes);
+        props.history.push("/cart");
+
     }
   };
 

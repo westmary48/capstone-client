@@ -1,9 +1,13 @@
 .myProducts-Div {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start
+  justify-content: flex-start;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 20px;
+
 }
 
 .card {
-  margin: 5px;
+  margin: 10px;
 }

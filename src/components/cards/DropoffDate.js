@@ -5,8 +5,9 @@ const DropoffTime = props => {
   const oldDate = props.dropoffTypes.dropoff_date;
   const { isAuthenticated } = useSimpleAuth();
 
-  const deleteDropoff = () => {
+  const deleteDropoff = (e) => {
     if (isAuthenticated()) {
+      e.preventDefault()
       fetch(`http://localhost:8000/dropoffs/${props.dropoffTypes.id}`, {
         method: "DELETE",
         headers: {

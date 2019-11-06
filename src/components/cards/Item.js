@@ -5,7 +5,7 @@ import useSimpleAuth from "../../hooks/ui/useSimpleAuth";
 const Item = props => {
   const { isAuthenticated } = useSimpleAuth();
 
-  const deleteItem = () => {
+  const deleteItem = (e) => {
     if (isAuthenticated()) {
       fetch(`http://localhost:8000/items/${props.item.id}`, {
         method: "DELETE",

@@ -47,6 +47,8 @@ const DonationboxCart = props => {
 
   const deleteDonationbox = () => {
     if (isAuthenticated()) {
+
+
       fetch(`http://localhost:8000/donationboxes/${donationbox.id}`, {
         method: "DELETE",
         headers: {
@@ -109,7 +111,7 @@ const DonationboxCart = props => {
             >
               Complete Donationbox
             </button>
-            <button className="btn btn-secondary" onClick={deleteCart}>
+            <button className="btn" onClick={deleteCart}>
               Delete Donationbox
             </button>
           </div>
@@ -140,7 +142,7 @@ const DonationboxCart = props => {
         </>
       ) : (
         <>
-          <h1 className="item-title">No items in Donation box!</h1>
+          <h1 className="item-title">Donation Box Empty</h1>
           <Link className="add-link" to="/items/new">
             Add Clothing Items
           </Link>

@@ -49,15 +49,15 @@ const HomePage = props => {
     }
     const dynamicHeader = (name) => {
       if (name === undefined) {
-        return <h3>See Whats all Being Donated</h3>
+        return <h3 className="searchbar">See Whats all Being Donated</h3>
       }
       else if (name === ""){
-        return <h3>Please enter a item name</h3>
+        return <h3 className="searchbar">Please enter a item name</h3>
       }
       else if (name !== undefined & items.length === 0) {
-        return <h3>No clothing items by the name of {name}.</h3>
+        return <h3 className="searchbar">No clothing items by the name of {name}.</h3>
       }
-      else return (<h3>All Clothing Items with the name {name}:</h3>)
+      else return (<h3 className = "searchbar">All Clothing Items with the name {name}:</h3>)
     }
 
     useEffect(getQuantity, [])
@@ -72,7 +72,7 @@ const HomePage = props => {
               <h4 className="add-link">Add a Item</h4>
               </a> : ""}
 
-          <form>
+          <form className="search-form">
             <input
                 placeholder="Search by item name..."
                 name="search"
