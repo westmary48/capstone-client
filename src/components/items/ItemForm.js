@@ -43,7 +43,6 @@ const ItemForm = props => {
         })
         .then(response => response.json())
         .then(() => {
-            console.log("Added")
             props.getItems()
             props.history.push("/myItems")
         })

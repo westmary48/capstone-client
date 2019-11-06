@@ -38,7 +38,7 @@ const Register = props => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="edit-title h3 mb-3 font-weight-normal">Register New User</h1>
+                <h1 className="item-title h3 mb-3 font-weight-normal">Register New User</h1>
                 <fieldset>
                     <label htmlFor="userName"> Username </label>
                     <input ref={userName} type="text"

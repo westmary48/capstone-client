@@ -64,12 +64,12 @@ const HomePage = props => {
 
       return(
         <>
-          <h1> Welcome to Size Your Drive</h1>
+          <h1 className="item-title">Size Your Drive</h1>
 
           {isAuthenticated() ?
 
           <a href='/items/new'>
-              <h4>Add a Item</h4>
+              <h4 className="add-link">Add a Item</h4>
               </a> : ""}
 
           <form>
@@ -79,11 +79,13 @@ const HomePage = props => {
                 ref={searchTerm}
             />
             <button
+            className="btn"
             id="search"
             onClick = {(event) => {
               searchItems(event)
             }}>Search</button>
             <button
+            className="btn"
             id="clear"
             onClick = {(event) => {
               getQuantity(event)

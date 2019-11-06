@@ -10,7 +10,6 @@ const DonationBoxDetail = props => {
 
 
     const getItemDonation = () => {
-        console.log("use effect?", props.donationbox.id)
             fetch(`http://localhost:8000/itemdonationboxes?donationbox_id=${props.donationbox.id}`, {
                 "method": "GET",
                 "headers": {
@@ -32,12 +31,10 @@ const DonationBoxDetail = props => {
 
 
     itemDonationBoxes.map(itemDonationBox => {
-        console.log(itemQuantities)
         if (itemQuantities[itemDonationBox.item.id]) {
             itemQuantities[itemDonationBox.item.id][0]++
         }
         else {
-            console.log(itemQuantities)
             itemQuantities[itemDonationBox.item.id] = [1, itemDonationBox.item.name, itemDonationBox.id ]
         }
     })
@@ -49,15 +46,15 @@ const DonationBoxDetail = props => {
         {
         <section className="donationbox-details">
         <PdfContainer createPdf={createPdf}>
-            <h3>Donation Box {props.donationbox.id}</h3>
-            <h4>Items:</h4>
+            <h4 className="title">Donation Box</h4>
             <div id="item-details">
             {
                 Object.keys(itemQuantities).map(function(key) {
                     return (
                     <div key={itemQuantities[key][1]}>
-
-                     <p className="donationbox-list"> {itemQuantities[key][0]} {itemQuantities[key][1]} </p>
+                        <ul>
+                     <li className="donationbox-list"> {itemQuantities[key][1]} ({itemQuantities[key][0]})</li>
+                     </ul>
               </div>
             )
                 })

@@ -23,7 +23,6 @@ const Profile = props => {
           const donator = donators.find(donator => {
             return donator.id === parseInt(localStorage.getItem("id"))
           });
-          console.log(donator.id)
           setDonator(donator);
         });
     }
@@ -56,7 +55,7 @@ const Profile = props => {
                 <b>Address:</b> {donator.address}
               </p>
             </div>
-            <Link className="link-nav-link" to = {{
+            <Link className="link-nav-link-li" to = {{
                 pathname: "/profile/update",
                 state: donator
             }} >
@@ -65,11 +64,11 @@ const Profile = props => {
             {/* <Link className="nav-link" to={`/dropoff/options`}>
               <h4>Dropoff Options</h4>
             </Link> */}
-            <Link className="link-nav-link" to={`/dropoff/create`}>
+            <Link className="link-nav-link-li" to={`/dropoff/create`}>
               <h4>Add Dropoff Date</h4>
             </Link>
 
-            <Link className="link-nav-link" to={`/donationboxhistory`}>
+            <Link className="link-nav-link-li" to={`/donationboxhistory`}>
               <h4>View Donation History</h4>
             </Link>
 

@@ -68,7 +68,6 @@ const getDonationboxes = () => {
 }
 
 const getCompleteDonationboxes = () => {
-  console.log(donationboxes)
   if (isAuthenticated()) {
       fetch(`http://localhost:8000/donationboxes?donator_id=${localStorage.getItem("id")}&complete=1`, {
           "method": "GET",
@@ -109,6 +108,7 @@ useEffect(() => {
                     return <Login {...props} />
                 }}
             />
+
 
             <Route
                 exact path="/itemcategories" render={props => {

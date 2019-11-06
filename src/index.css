@@ -65,11 +65,11 @@ form {
 }
 
 input {
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 30px;
   border: 1px solid #eee;
   margin-bottom: 15px;
-  width: 75%;
-  height: 40px;
+  width: 80%;
+  height: 50px;
   float: right;
   padding: 0px 15px;
   box-shadow: 0 0 1px 3px #69A583;
@@ -99,7 +99,11 @@ input {
 
 .link-nav-link {
   text-align: center;
-  font-size: 40px;
+  font-size: 80px;
+  color: #fea49f;
+}
+.link-nav-link-li{
+  font-size: 80px;
   color: #fea49f;
 }
 
@@ -216,6 +220,8 @@ label {
 }
 
 .info {
+  display: block;
+  justify-content: center;
   margin: 15px;
 }
 
@@ -304,10 +310,11 @@ button {
 
 .meh{
   width: 300px;
+  height: 350px;
   padding: 10px;
   border: 5px solid #007f4f;
   border-radius: rounded;
-  margin: 0;
+  margin: 20;
 }
 
 .myProducts-Div{
@@ -315,7 +322,20 @@ button {
   flex: wrap;
   justify-content: space-around;
   padding: 20px;
+  margin: 20px;
 }
 
+.title{
+  font-size: 60px;
+  color: #fea49f;
+}
+
+.homePage-Div{
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 

@@ -47,7 +47,7 @@ const Item = props => {
               {
                 +props.item.donator.id === +localStorage.getItem("id") ?
                 <>
-                  <button className="btn btn-info" onClick={() => {
+                  <button className="btn" onClick={() => {
                     if (window.confirm(`Are you sure you want to remove ${props.item.name}?`)) {
                       deleteItem()
                     }

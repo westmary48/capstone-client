@@ -11,7 +11,6 @@ const DonationboxCart = (props) => {
     const { isAuthenticated } = useSimpleAuth()
 
     const getItemDonationboxes = (data) => {
-        console.log(data)
         if (data.length !== 0)
         {
             setDonationbox(data[0])
@@ -25,7 +24,6 @@ const DonationboxCart = (props) => {
             .then(setItemDonationboxes)
         }
         else {
-            console.log(data)
           setDonationbox(data)
         }
 }
@@ -98,7 +96,7 @@ const DonationboxCart = (props) => {
         <>
           <h2 className="item-title">Donationbox</h2>
           <div className="orderBtn-Div">
-            <button className="btn btn-info"onClick={() => {
+            <button className="btn "onClick={() => {
               props.history.push("/cart/addDropoff")
             }}>
             Complete Donationbox

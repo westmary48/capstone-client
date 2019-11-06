@@ -87,7 +87,7 @@ const ProfileEditForm = props => {
           name="address"
           required></input>
         </fieldset>
-        <button className="btn btn-info" type="submit">Update Profile</button>
+        <button className="btn" type="submit">Update Profile</button>
       </form>
     </>
   )

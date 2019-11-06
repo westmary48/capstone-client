@@ -31,7 +31,6 @@ const ItemDetail = props => {
                 })
                 .then(response => response.json())
                 .then(data => {
-                console.log(data[0])
                   setItemDonationBox(data[0])
                   setCount_Cart(data.length)
                 })
