@@ -1,14 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter as Router } from "react-router-dom"
-// import App from './App'
-import CapstoneBuilder from './components/capstone'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import CapstoneBuilder from "./components/capstone";
+import "./index.css";
 
 ReactDOM.render(
   <Router>
-      <CapstoneBuilder
-       />
-  </Router>
+    <CapstoneBuilder />
+  </Router>,
 
-  , document.getElementById('root'))
+  document.getElementById("root")
+);

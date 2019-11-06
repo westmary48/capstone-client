@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 
-
 const EditItem = props => {
   const [items, setItems] = useState({});
   const [categoriesInfo, setCategoryInfo] = useState({});
-
 
   const name = useRef();
   const description = useRef();
@@ -14,57 +12,53 @@ const EditItem = props => {
 
   const getSingleItem = id => {
     return fetch(`http://localhost:8000/items/${id}`, {
-      "method": "GET",
-      "headers": {
-        "Accept": "application/json",
+      method: "GET",
+      headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
-        "Authorization": `Token ${localStorage.getItem("capstone_token")}`
+        Authorization: `Token ${localStorage.getItem("capstone_token")}`
       }
     })
       .then(e => e.json())
       .then(setItems);
   };
 
-
   const getAllCategories = () => {
     fetch(`http://localhost:8000/itemcategories`, {
-      "method": "GET",
-      "headers": {
-        "Accept": "application/json",
+      method: "GET",
+      headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
-        "Authorization": `Token ${localStorage.getItem("capstone_token")}`
+        Authorization: `Token ${localStorage.getItem("capstone_token")}`
       }
     })
       .then(response => response.json())
       .then(setCategoryInfo);
   };
 
-
   const updateItems = () => {
-        fetch(`http://localhost:8000/items/${items.id}`, {
-            "method": "PUT",
-            "headers": {
-              "Accept": "application/json",
-              "Content-Type": "application/json",
-              "Authorization": `Token ${localStorage.getItem("capstone_token")}`
-            },
-            "body": JSON.stringify({
-              "name": name.current.value,
-              "description": description.current.value,
-              "size": size.current.value,
-              "quantity": quantity.current.value,
-              "item_category": item_category.current.value
-          })
-        })
-            .then(() => {
-              props.history.push("/myItems")
-            })
-
-    }
+    fetch(`http://localhost:8000/items/${items.id}`, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Token ${localStorage.getItem("capstone_token")}`
+      },
+      body: JSON.stringify({
+        name: name.current.value,
+        description: description.current.value,
+        size: size.current.value,
+        quantity: quantity.current.value,
+        item_category: item_category.current.value
+      })
+    }).then(() => {
+      props.history.push("/myItems");
+    });
+  };
 
   useEffect(() => {
     getSingleItem(props.match.params.itemId);
-    getAllCategories()
+    getAllCategories();
   }, []);
 
   return (
@@ -115,10 +109,19 @@ const EditItem = props => {
             </fieldset>
             <fieldset>
               <label>Category:</label>
-              <select className="select-css" type="text" name="category" ref={item_category}>
+              <select
+                className="select-css"
+                type="text"
+                name="category"
+                ref={item_category}
+              >
                 {categoriesInfo.map(item_category => {
                   return (
-                    <option key={item_category.id} id={item_category.id} value={item_category.id}>
+                    <option
+                      key={item_category.id}
+                      id={item_category.id}
+                      value={item_category.id}
+                    >
                       {item_category.name}
                     </option>
                   );
@@ -127,7 +130,10 @@ const EditItem = props => {
             </fieldset>
 
             <br />
-            <button className="btn" onClick={() => updateItems(categoriesInfo, categoriesInfo.id)}>
+            <button
+              className="btn"
+              onClick={() => updateItems(categoriesInfo, categoriesInfo.id)}
+            >
               Update Item
             </button>
           </div>

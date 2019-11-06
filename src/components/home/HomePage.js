@@ -47,7 +47,7 @@ const HomePage = props => {
       })
       .then(dynamicHeader())
     }
-    const dynamicHeader = (city) => {
+    const dynamicHeader = (name) => {
       if (name === undefined) {
         return <h3>See Whats all Being Donated</h3>
       }

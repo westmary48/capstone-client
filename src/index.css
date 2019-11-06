@@ -20,45 +20,46 @@ code {
 .navbar {
   display: flex;
   justify-content: space-around;
-  background:#101357;
-  size: 40px
+  background: #101357;
+  size: 40px;
 }
 
 .nav-item {
-color:white;
+  color: white;
 }
 
-.add-link{
+.add-link {
   display: flex;
   justify-content: space-around;
   font-size: 40px;
-  color:#fbaf08;
+  color: #fbaf08;
   min-height: 80px;
 }
 
-.ApplicationViews{
+.ApplicationViews {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-010-winter-neva.png) no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-min-height: 1024px;
-min-width: 1024px;
-width: 100%;
-height: 100%;
+  background: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-010-winter-neva.png)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 1024px;
+  min-width: 1024px;
+  width: 100%;
+  height: 100%;
 }
 
 form {
   border-radius: 5px;
   border-color: black;
-  max-width:800px;
-  width:100%;
+  max-width: 800px;
+  width: 100%;
   margin: 5% auto;
   background-color: transparent;
   overflow: hidden;
@@ -72,28 +73,25 @@ input {
   height: 50px;
   float: right;
   padding: 0px 15px;
-  box-shadow: 0 0 1px 3px #69A583;
+  box-shadow: 0 0 1px 3px #69a583;
 }
-
 
 .edit-title {
   font-size: 40px;
-  background:#69A583 none repeat scroll 0% 0%;
+  background: #69a583 none repeat scroll 0% 0%;
   color: rgb(255, 255, 255);
   padding: 30px 30px;
   border-radius: 5px 5px 0px 0px;
   margin: auto;
   text-shadow: none;
-  text-align:center;
+  text-align: center;
 }
 
-
-
 .nav-link {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   font-size: 30px;
-  color:white;
+  color: white;
   min-height: 80px;
 }
 
@@ -102,44 +100,34 @@ input {
   font-size: 80px;
   color: #fea49f;
 }
-.link-nav-link-li{
+.link-nav-link-li {
   font-size: 80px;
   color: #fea49f;
 }
 
 .p {
   font-size: 30px;
-  color: #69A583;
+  color: #69a583;
 }
-
 
 .item-title {
   display: flex;
   justify-content: center;
-  font: 700 90px/1 'Source Sans Pro',
-  Arial, sans-serif; text-transform:
-  uppercase; color:#fea49f;
+  font: 700 90px/1 "Source Sans Pro", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fea49f;
   margin: auto;
   text-align: center;
-justify-content:center;
+  justify-content: center;
   letter-spacing: 0px;
   margin: 10px;
-  text-shadow:
-   0 1px 0 hsl(174,5%,80%),
-  0 2px 0 hsl(174,5%,75%),
-  0 3px 0 hsl(174,5%,70%),
-  0 4px 0 hsl(174,5%,66%),
-  0 5px 0 hsl(174,5%,64%),
-  0 6px 0 hsl(174,5%,62%),
-  0 7px 0 hsl(174,5%,61%),
-  0 8px 0 hsl(174,5%,60%),
-
-  0 0 5px rgba(0,0,0,.05),
- 0 1px 3px rgba(0,0,0,.2),
- 0 3px 5px rgba(0,0,0,.2),
-0 5px 10px rgba(0,0,0,.2),
-0 10px 10px rgba(0,0,0,.2),
-0 20px 20px rgba(0,0,0,.3);
+  text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
+    0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%),
+    0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%),
+    0 7px 0 hsl(174, 5%, 61%), 0 8px 0 hsl(174, 5%, 60%),
+    0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2),
+    0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav-button {
@@ -152,71 +140,67 @@ justify-content:center;
 }
 
 .btn {
-  background:#fbaf08;
+  background: #fbaf08;
 }
 
 label {
   font-size: 25px;
-  color: #EC799A;
+  color: #ec799a;
   margin-top: -15;
 }
 
-.center{
+.center {
   justify-content: center;
 }
 
-.edit {
-  font-size: 20px;
-  background:#9F0251;
-}
 
-.order-details{
+.order-details {
   display: flex;
   justify-content: center;
 }
 
 .item-details {
-  color: #EC799A;
+  color: #ec799a;
 }
 
 .select-css {
   float: right;
-  box-shadow: 0 0 1px 3px #69A583;
-	font-size: 16px;
-	font-family: sans-serif;
-	font-weight: 700;
-	color: #444;
-	line-height: 1.3;
-	padding: .6em 1.4em .5em .8em;
-	width: 75%;
-	max-width: 100%;
-	box-sizing: border-box;
-	margin: 0;
-	border: 1px solid #aaa;
-	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
-	border-radius: .5em;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	background-color:transparent;
-	background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQBna--eTOXY3triuKlGP2XGmmdlKdMlEviF8fPFusNO-QI_Rvl),
-	linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
-	background-repeat: no-repeat, repeat;
-	background-position: right .7em top 50%, 0 0;
-	background-size: .65em auto, 100%;
+  box-shadow: 0 0 1px 3px #69a583;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 75%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQBna--eTOXY3triuKlGP2XGmmdlKdMlEviF8fPFusNO-QI_Rvl),
+    linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
 }
 .select-css::-ms-expand {
-	display: none;
+  display: none;
 }
 .select-css:hover {
-	border-color: #888;
+  border-color: #888;
 }
 .select-css:focus {
-	border-color: #aaa;
-	box-shadow: 0 0 1px 3px #69A583;
-	box-shadow: 0 0 0 3px -moz-mac-focusring;
-	color: #222;
-	outline: none;
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px #69a583;
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
 }
 
 .info {
@@ -230,94 +214,83 @@ label {
   justify-content: center;
 }
 
-.donationbox-list{
+.donationbox-list {
   font-size: 60px;
-  color: #69A583;
+  color: #69a583;
 }
 
-.container{
+.container {
   padding: 30px 30px;
   margin: auto;
 }
 
 html {
- font-size: 16px;
+  font-size: 16px;
 }
 
 body {
- font: 100% / 1.414 sans-serif;
+  font: 100% / 1.414 sans-serif;
 }
 
 form {
- margin-right: auto;
- margin-left: auto;
- max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 500px;
 }
 
 fieldset {
- padding: 0;
- margin: 0;
- border: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 label {
- margin-bottom: 8px;
- display: block;
- color: #2b2e4a;
+  margin-bottom: 8px;
+  display: block;
+  color: #2b2e4a;
 }
 
-input:not([type=checkbox]):not([type=radio]),
+input:not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {
- padding: 8px;
- width: 100%;
- border-top: 0;
- border-right: 0;
- border-bottom: 1px solid #bdc3c7;
- border-left: 0;
- transition: border-bottom-color .15s ease-in;
-
+  padding: 8px;
+  width: 100%;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #bdc3c7;
+  border-left: 0;
+  transition: border-bottom-color 0.15s ease-in;
 }
 
-input[type=checkbox],
-input[type=radio] {
- margin-right: 8px;
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
 }
 
 textarea {
- resize: vertical;
+  resize: vertical;
 }
 
 button {
- margin-right: auto;
- margin-left: auto;
- display: block;
- padding: 8px 16px;
- font-size: 16px;
- color: #fff;
- background-color: #3fc1c9;
- border: 0;
- border-radius: 2px;
- cursor: pointer;
- transition: background-color .15s ease-in;
-
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #3fc1c9;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in;
 }
 
-.buttons{
+.buttons {
   float: right;
-  background:#fea49f;
+  background: #fea49f;
 }
 
-.meh{
-  /* position: relative; */
-  width: 300px;
-  height:350px;
-  padding: 10px;
-  border: 5px solid #007f4f;
-  margin: 0;
-}
-
-.myProducts-Div{
+.myProducts-Div {
   display: flex;
   flex: wrap;
   justify-content: space-around;
@@ -325,18 +298,15 @@ button {
   margin: 20px;
 }
 
-.title{
+.title {
   font-size: 60px;
   color: #fea49f;
 }
 
-.homePage-Div{
+.homePage-Div {
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-
-
