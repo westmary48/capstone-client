@@ -309,12 +309,12 @@ button {
 }
 
 .meh{
+  /* position: relative; */
   width: 300px;
-  height: 350px;
+  height:350px;
   padding: 10px;
   border: 5px solid #007f4f;
-  border-radius: rounded;
-  margin: 20;
+  margin: 0;
 }
 
 .myProducts-Div{
@@ -337,5 +337,6 @@ button {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 
 

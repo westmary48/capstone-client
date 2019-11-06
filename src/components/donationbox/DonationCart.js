@@ -128,7 +128,7 @@ const DonationboxCart = (props) => {
           :
           <>
           <h1 className = "item-title">No items in Donation box!</h1>
-          <Link className="link-nav-link" to="/items/new">
+          <Link className="add-link" to="/items/new">
             Add Clothing Items
           </Link>
           </>
