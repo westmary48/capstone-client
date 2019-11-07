@@ -53,10 +53,10 @@ const DonationBoxDetail = props => {
                 return (
                   <div key={itemQuantities[key][1]}>
                     <ul>
-                      <li className="donationbox-list">
+                      <div className="donationbox-list">
                         {" "}
                         {itemQuantities[key][1]} ({itemQuantities[key][0]}) {itemQuantities[key][3]}
-                      </li>
+                      </div>
                     </ul>
                   </div>
                 );
