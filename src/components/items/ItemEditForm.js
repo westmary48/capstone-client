@@ -49,7 +49,7 @@ const EditItem = props => {
         description: description.current.value,
         size: size.current.value,
         quantity: quantity.current.value,
-        item_category: item_category.current.value
+        item_category: +item_category.current.value
       })
     }).then(() => {
       props.history.push("/myItems");
@@ -65,7 +65,7 @@ const EditItem = props => {
     <>
       <form className="item-title col">Edit Item</form>
       {items.id ? (
-        <div key={items.id} className="">
+        <div key={items.id} className="new-form">
           <div className="form">
             <fieldset>
               <label>Name:</label>

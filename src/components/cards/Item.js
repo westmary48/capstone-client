@@ -32,25 +32,29 @@ const Item = props => {
           </section>
           {props.showCategory ? (
             <>
+            <div className="card-body">
               <p className="p-2">
-                Description:
+                <b>Description:{"   "}</b>
                 {props.item.description}
               </p>
               <p className="p-2">
-                Size:
+                <b>Size:{"   "}</b>
                 {props.item.size}
               </p>
               <p className="p-2">
-                Category:
+                <b>Category:{"   "}</b>
                 {props.item.item_category.name}
               </p>
+              </div>
             </>
           ) : (
             ""
           )}
+          <div className="card-body">
           <p className="p-2">
-            Quantity: <b>{props.item.quantity}</b>{" "}
+            <b>Quantity:{"   "}</b> <b>{props.item.quantity}</b>{" "}
           </p>
+          </div>
           {+props.item.donator.id === +localStorage.getItem("id") ? (
             <>
               <button

@@ -111,16 +111,16 @@ const ItemDetail = props => {
       </dialog>
       {
         <section className="item-details">
-          <h3>Name: {props.item.name}</h3>
-          <h3>
-            Donator: {props.item.donator.user.first_name}{" "}
+          <h3 className="sizing"><b>Name:</b>{" "} {props.item.name}</h3>
+          <h3 className="sizing">
+            <b>Donator:</b>{" "}{props.item.donator.user.first_name}{" "}
             {props.item.donator.user.last_name}
-          </h3>
-          <h3>Size: {props.item.size}</h3>
-          <h3>Description: {props.item.description}</h3>
+          </h3 >
+          <h3 className="sizing"><b>Size:</b>{" "}{props.item.size}</h3>
+          <h3 className="sizing"><b>Description:</b>{" "}{props.item.description}</h3>
 
-          <div id="product-quantity">
-            <h3>Quantity: {itemQuantity}</h3>
+          <div id="product">
+            <h3 className="sizing"><b>Quantity:</b>{" "}{itemQuantity}</h3>
           </div>
           {isAuthenticated() ? (
             count_cart < props.item.quantity &&

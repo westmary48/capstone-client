@@ -59,14 +59,14 @@ const Profile = props => {
               state: donator
             }}
           >
-            <h4>Edit Profile</h4>
+            <h4 className="link-nav-link-nav">Edit Profile</h4>
           </Link>
           <Link className="link-nav-link-li" to={`/dropoff/create`}>
-            <h4>Add Dropoff Date</h4>
+            <h4 className="link-nav-link-nav">Add Dropoff Date</h4>
           </Link>
 
           <Link className="link-nav-link-li" to={`/donationboxhistory`}>
-            <h4>View Donation History</h4>
+            <h4 className="link-nav-link-nav">View Donation History</h4>
           </Link>
         </div>
       </main>
