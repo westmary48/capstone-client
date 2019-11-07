@@ -16,7 +16,7 @@ function App() {
         >
           Learn React
         </a>
-        <button className="btn btn-info"></button>
+        <button className="btn"></button>
       </header>
     </div>
   );
